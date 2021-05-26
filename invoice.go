@@ -76,11 +76,10 @@ func init() {
 func generateInvoice(data [][]string) error {
 	marginX := 10.0
 	marginY := 20.0
-	//gapX := float64(2)
 	gapY := 2.0
 	pdf := gofpdf.New("P", "mm", "A4", "")
-	pdf.AddPage()
 	pdf.SetMargins(marginX, marginY, marginX)
+	pdf.AddPage()
 	pageW, _ := pdf.GetPageSize()
 	safeAreaW := pageW - 2*marginX
 
